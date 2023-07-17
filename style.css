@@ -1,0 +1,341 @@
+body{
+    background-color: black;
+    background-size: cover;
+    margin: 0;
+    color: white;
+    height: 100%;
+}
+
+.side-bar{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s; 
+    width: 0;
+}
+
+.side-bar button{
+    margin: 0.3em;
+    width : 100px
+}
+
+.menu-bar{
+    padding: 1em;
+    font-size: 1.5em;
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu{
+    display: flex;
+    align-items: center;
+}
+
+.close-menu{
+    align-self: flex-end;
+    margin-bottom: 2em;
+    margin-right: 1em;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: linear 0.5s;
+    opacity:0;
+    z-index: 1;
+    
+}
+.title{
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Caprasimo', cursive;;
+    cursor: pointer;
+}
+.modal{
+    color: black;
+}
+
+.search-area{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(29, 29, 29, 0.8);
+    text-align: center;
+    width: 70vw;
+    height: 40vw;
+    border-radius: 5px;
+}
+
+.close-button{
+    align-self: flex-end;
+    margin-top: 1em;
+    margin-right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.search-area div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.search-area span{
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+#user-input{
+    font-size: 2em;
+    border: 3px rgb(168, 7, 7) solid;
+    border-radius: 3px;
+    margin-right: 0.5em;
+}
+
+.category-bar{
+    text-align: center;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 3px white double;
+}
+.category-bar button{
+    color: white;
+    font-size: 1em;
+    background: none;
+    border: none;
+}
+
+.category-bar i {
+    margin-left: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#bar-underline{
+    
+    position: absolute;
+    height: 4px !important;
+    background-color: rgb(168, 7, 7) ;
+    transition: 0.5s;
+}
+
+.carousel{
+    max-width: 30vw;
+}
+
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.63);
+    cursor: pointer;
+}
+
+.carousel-caption:hover .poster-title{
+    text-decoration: underline;
+}
+
+.poster-detail{
+    display: none;
+}
+.carousel-caption:hover .poster-detail{
+    display: block;
+
+}
+
+#search-button{
+    font-size: 2em;
+    background:none;
+    border: none;
+    color: white;
+}
+
+#search-button:active{
+    color: rgb(168, 7, 7) ;
+
+}
+
+.movie-image{
+    max-width: 150px;
+    max-height: 210px;
+    object-fit:cover;
+    margin-bottom : 0.5em;
+}
+
+.movie-list{
+    text-align: center;
+}
+
+.movie-items{
+    margin-bottom: 2em;
+}
+.current-movie h2{
+    text-align: center;
+}
+.category-area h2{
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.category-area nav{
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.page-link{
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+.page-link:hover{
+    color: rgb(168, 7, 7);
+    background-color: transparent;
+    
+}
+
+.active>.page-link, .page-link.active {
+    z-index: 3;
+    color: white;
+    background-color: rgb(168, 7, 7);
+    border-color: rgb(168, 7, 7);
+}
+
+.category-area{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-poster{
+    width: 70%;
+    margin-bottom: 0.5em;
+}
+
+.go-top{
+    display: none;
+    width: fit-content;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgb(168, 7, 7) 0px 1px 3px -1px;
+    color: rgb(168, 7, 7);
+    border-radius: 6px;
+}
+
+.modal-rate-num{
+    margin-bottom: 1em;
+}
+.modal-content{
+    background-color:rgba(29, 29, 29, 0.9);
+    color: white;
+}
+.btn-close{
+    --bs-btn-close-bg : none;
+    color: white;
+}
+
+.btn-close:hover{
+    color: rgb(168, 7, 7);
+}
+
+.btn-close:focus{
+    color: rgb(168, 7, 7);
+    box-shadow: none;
+}
+
+.modal-title{
+    width: 100%;
+    text-align: center;
+}
+
+.movie-items{
+    cursor: pointer;
+}
+
+#side-search{
+    display: none;
+    cursor: pointer;
+}
+@media screen and (max-width : 991px){
+    .search-area{
+        width: 100vw;
+        height: 60vw;
+        border-radius: 0;
+    }
+    .search-area span{
+        margin-top: 1em;
+        margin-bottom: 3em;
+    }
+
+    #user-input{
+        font-size: 1.5em;
+    }
+
+    #search-button{
+        font-size: 1.5em;
+    }
+
+    .close-button{
+        font-size: 1em;
+    }
+    .carousel {
+        max-width: 80vw;
+    }
+
+    .current-movie{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
+        margin-top: 1em;
+    }
+
+    .current-movie h2{
+        margin-bottom: 1em;
+    }
+    
+    #category-bar{
+        display: none;
+    }
+
+    .title{
+        padding-top: 1rem;
+    }
+
+    .menu-bar{
+        display: block;
+    }
+
+    .menu-bar{
+        display: block;
+    }
+
+    #side-search{
+        display: block;
+    }
+}
