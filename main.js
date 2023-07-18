@@ -132,10 +132,7 @@ const modalRender = () =>{
         }
     }
     document.querySelector(".modal-rate").innerHTML=modalRateHtml;
-    document.querySelector(".modal-rate-num").textContent=starRate;
-    
-
-
+    document.querySelector(".modal-rate-num").textContent=starRate;    
 }
 
 const categoryRender = () => {
@@ -294,12 +291,15 @@ const movieListScroll = () => {
 
 const closeMenu=()=>{
     document.querySelector(".side-bar").style.width = "0"
+    carouselButton.forEach((item)=>item.style.display="block");
 }
 
 const openMenu=()=>{
     document.querySelector(".side-bar button").style.width = "fit-content"
     document.querySelector(".side-bar").style.width = "50%"
+    carouselButton.forEach((item)=>item.style.display="none");
 }
+
 
 window.addEventListener("scroll", (event) => {
     let scrollY = this.scrollY;

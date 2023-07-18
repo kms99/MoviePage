@@ -23,7 +23,7 @@ body{
 }
 
 .side-bar button{
-    margin: 0.3em;
+    margin: 0.2em;
     width : 100px
 }
 
@@ -41,6 +41,7 @@ body{
 
 .close-menu{
     align-self: flex-end;
+    margin-top: 2em;
     margin-bottom: 2em;
     margin-right: 1em;
 }
